@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Events - SIAM Student Chapter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #4a5568;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+        
+        .page-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #718096;
+            margin-bottom: 50px;
+        }
+        
+        .event-card {
+            background: white;
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .event-card h3 {
+            font-size: 1.8em;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .event-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .event-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4a5568;
+        }
+        
+        .event-detail-item strong {
+            color: #667eea;
+        }
+        
+        .event-description {
+            color: #4a5568;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .upcoming-label {
+            display: inline-block;
+            background-color: #48bb78;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .past-events {
+            margin-top: 60px;
+        }
+        
+        .past-events h2 {
+            font-size: 2em;
+            color: #4a5568;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .past-label {
+            background-color: #a0aec0;
+        }
+        
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIAM Student Chapter</h1>
+        <p>Purdue University</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html" class="active">Current Events</a></li>
+            <li><a href="conference.html">Student Conference</a></li>
+            <li><a href="social.html">Social Events</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1 class="page-title">Current Events</h1>
+        <p class="page-subtitle">Fall 2025</p>
+        
+        <div class="event-card">
+            <span class="upcoming-label">Weekly Event</span>
+            <h3>SCAM/CCAM Lunch Seminar</h3>
+            <div class="event-details">
+                <div class="event-detail-item">
+                    <strong>📅 When:</strong> Every Friday
+                </div>
+                <div class="event-detail-item">
+                    <strong>🕐 Time:</strong> 11:30 AM - 12:30 PM
+                </div>
+                <div class="event-detail-item">
+                    <strong>📍 Location:</strong> STON 215
+                </div>
+            </div>
+            <div class="event-description">
+                <p>Join us for our weekly lunch seminar featuring talks on applied mathematics, computational science, and related topics. This is a great opportunity to learn about cutting-edge research and network with fellow students and faculty.</p>
+            </div>
+        </div>
+        
+        <!-- Add more upcoming events here -->
+        <div class="event-card">
+            <span class="upcoming-label">Upcoming</span>
+            <h3>Guest Speaker Series</h3>
+            <div class="event-details">
+                <div class="event-detail-item">
+                    <strong>📅 Date:</strong> TBA
+                </div>
+                <div class="event-detail-item">
+                    <strong>🕐 Time:</strong> TBA
+                </div>
+                <div class="event-detail-item">
+                    <strong>📍 Location:</strong> TBA
+                </div>
+            </div>
+            <div class="event-description">
+                <p>Details coming soon! Stay tuned for announcements about our upcoming guest speakers from industry and academia.</p>
+            </div>
+        </div>
+        
+        <!-- Past Events Section -->
+        <div class="past-events">
+            <h2>Past Events</h2>
+            
+            <div class="event-card">
+                <span class="upcoming-label past-label">Past Event</span>
+                <h3>Event Title</h3>
+                <div class="event-details">
+                    <div class="event-detail-item">
+                        <strong>📅 Date:</strong> Month Day, 2025
+                    </div>
+                    <div class="event-detail-item">
+                        <strong>🕐 Time:</strong> Time
+                    </div>
+                    <div class="event-detail-item">
+                        <strong>📍 Location:</strong> Location
+                    </div>
+                </div>
+                <div class="event-description">
+                    <p>Event description and summary goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
+        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+    </footer>
+</body>
+</html>
