@@ -3,58 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Chapter Website</title>
+    <title>SIAM Student Chapter - Purdue University</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
         }
+        
         header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
         }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
         nav {
-            margin: 20px 0;
+            background-color: #4a5568;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #4a5568;
+        }
+        
+        .about-section {
+            background-color: #f7fafc;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 50px;
             text-align: center;
         }
-        nav a {
-            margin: 0 15px;
+        
+        .about-section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #4a5568;
+        }
+        
+        .officers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .officer-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .officer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .officer-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+        }
+        
+        .officer-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .officer-position {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #667eea;
             text-decoration: none;
-            color: #0066cc;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to SIAM Chapter</h1>
-        <p>Student Chapter @ Purdue Univeristy</p>
+        <h1>SIAM Student Chapter</h1>
+        <p>Purdue University</p>
     </header>
     
     <nav>
-        <a href="#about">About</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="events.html">Current Events</a></li>
+            <li><a href="conference.html">Student Conference</a></li>
+            <li><a href="social.html">Social Events</a></li>
+        </ul>
     </nav>
     
-    <main>
-        <section id="about">
+    <div class="container">
+        <section class="about-section">
             <h2>About Us</h2>
             <p>We are a student organization dedicated to promoting applied mathematics, computational science, and data science to young mathematicians and scientists around the world.</p>
         </section>
         
-        <section id="events">
-            <h2>Weekly Events 2025 Fall</h2>
-            <p>SCAM/CCAM Lunch Seminar (Weekly on Friday 11:30 am - 12:30 pm, STON 215) </p>
+        <section class="officers-section">
+            <h2 class="section-title">Meet Our Officers</h2>
+            <div class="officers-grid">
+                <div class="officer-card">
+                    <div class="officer-photo">TD</div>
+                    <div class="officer-name">Tong Ding</div>
+                    <div class="officer-position">President</div>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">JU</div>
+                    <div class="officer-name">Jeffery Utley</div>
+                    <div class="officer-position">Vice President</div>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">XL</div>
+                    <div class="officer-name">Xiaoyu Liu</div>
+                    <div class="officer-position">Treasurer</div>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">YC</div>
+                    <div class="officer-name">Yineng Chen</div>
+                    <div class="officer-position">Treasurer</div>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">SG</div>
+                    <div class="officer-name">Stanley (Suiyi) Gao</div>
+                    <div class="officer-position">Web Master</div>
+                </div>
+                
+                <div class="officer-card">
+                    <div class="officer-photo">CH</div>
+                    <div class="officer-name">Cesar Herrera</div>
+                    <div class="officer-position">Joint Events Coordinator</div>
+                </div>
+            </div>
         </section>
-        
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: siam@purdue.edu</p>
-        </section>
-    </main>
+    </div>
+    
+    <footer>
+        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
+        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+    </footer>
 </body>
 </html>
