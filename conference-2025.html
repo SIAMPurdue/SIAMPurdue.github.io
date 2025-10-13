@@ -201,6 +201,29 @@
             margin-bottom: 10px;
         }
         
+        .conference-photo {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        
+        .conference-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .conference-photo figcaption {
+            background-color: #f0f9ff;
+            padding: 15px 20px;
+            text-align: center;
+            color: #2c5282;
+            font-style: italic;
+        }
+        
         footer {
             background-color: #2c5282;
             color: white;
@@ -247,6 +270,12 @@
     <div class="container">
         <h1 class="page-title">Conference 2025</h1>
         
+        <!-- Group Photo at the Top -->
+        <figure class="conference-photo">
+            <img src="images/conferences/group-2025.jpg" alt="Conference 2025 Group Photo">
+            <figcaption>SIAM Student Conference 2025 - Thank you to all participants and speakers!</figcaption>
+        </figure>
+        
         <div class="speaker-section">
             <h2>🎤 Invited Speaker</h2>
             <div class="speaker-info">
@@ -265,6 +294,7 @@
             <div class="schedule-item">
                 <div class="time">9:30 - 9:40 AM</div>
                 <h3>Opening Remarks</h3>
+                <div class="speaker">Prof. Greg Buzzard</div>
             </div>
             
             <div class="schedule-item">
