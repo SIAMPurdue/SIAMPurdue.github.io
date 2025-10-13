@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference 2024 - SIAM Student Chapter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #2c5282;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0;
+            position: relative;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #0B7A9F;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2c5282;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            padding: 12px 20px;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #0B7A9F;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: ' ▾';
+            font-size: 0.8em;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #2c5282;
+        }
+        
+        .schedule-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .schedule-item {
+            border-left: 4px solid #0B7A9F;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f0f9ff;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .schedule-item h3 {
+            color: #2c5282;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .schedule-item .time {
+            font-weight: bold;
+            color: #0B7A9F;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .schedule-item .speaker {
+            color: #00A896;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .break-item {
+            border-left: 4px solid #00A896;
+            background-color: #f0fdfa;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .break-item .time {
+            color: #00A896;
+        }
+        
+        footer {
+            background-color: #2c5282;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        footer a {
+            color: #00A896;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIAM Student Chapter</h1>
+        <p>Purdue University</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Current Events</a></li>
+            <li class="dropdown">
+                <a href="conference.html" class="active">Student Conference</a>
+                <div class="dropdown-content">
+                    <a href="conference-2025.html">Conference 2025</a>
+                    <a href="conference-2024.html">Conference 2024</a>
+                </div>
+            </li>
+            <li><a href="social.html">Social Events</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1 class="page-title">Conference 2024</h1>
+        
+        <div class="schedule-section">
+            <h2 style="color: #2c5282; font-size: 2em; margin-bottom: 30px;">Conference Schedule</h2>
+            
+            <div class="schedule-item">
+                <div class="time">8:00 - 8:30 AM</div>
+                <h3>Registration & Welcome</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">8:30 - 9:00 AM</div>
+                <div class="speaker">Jayanta Mukherjee</div>
+                <h3>Fault Oblivious Erasure-Coded Eigenvalue Solver for Symmetric Positive Definite Systems</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">9:05 - 9:35 AM</div>
+                <div class="speaker">Sthavishtha Bhopalam</div>
+                <h3>Phase-field Modeling of Microscale Fluid-Structure Interaction</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">9:40 - 10:10 AM</div>
+                <div class="speaker">General Ozochiawaeze</div>
+                <h3>A Linear Sampling Method for the Inverse Cavity Problem of Biharmonic Waves</h3>
+            </div>
+            
+            <div class="schedule-item break-item">
+                <div class="time">10:15 - 10:35 AM</div>
+                <h3>☕ Coffee Break</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">10:35 - 11:05 AM</div>
+                <div class="speaker">Bolian Li</div>
+                <h3>Entropy-MCMC: Sampling from Flat Basins with Ease</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">11:10 - 11:40 AM</div>
+                <div class="speaker">Raymond Song</div>
+                <h3>Beyond Worst-Case Analysis in Optimization and Learning Theory</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">11:45 AM - 12:15 PM</div>
+                <div class="speaker">Nithish Kumar Kumar</div>
+                <h3>Directed Buy-at-Bulk Spanners</h3>
+            </div>
+            
+            <div class="schedule-item break-item">
+                <div class="time">12:20 - 1:20 PM</div>
+                <h3>🍽️ Lunch Break</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">1:20 - 1:50 PM</div>
+                <div class="speaker">Tong Ding</div>
+                <h3>Randomized Techniques in Numerical Linear Algebra</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">1:55 - 2:25 PM</div>
+                <div class="speaker">Yufan Huang</div>
+                <h3>Densest Subhypergraph: Negative Supermodular Functions and Strongly Localized Methods</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">2:30 - 3:00 PM</div>
+                <div class="speaker">Abhijeet Vyas</div>
+                <h3>Mirror-free Proximal Methods for Third Order Min-Max Optimization</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">3:05 - 3:35 PM</div>
+                <div class="speaker">Patrick Pynadath</div>
+                <h3>Gradient-based Discrete Sampling with Automatic Cyclical Scheduling</h3>
+            </div>
+            
+            <div class="schedule-item break-item">
+                <div class="time">3:40 - 4:00 PM</div>
+                <h3>☕ Coffee Break</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">4:00 - 4:30 PM</div>
+                <div class="speaker">Shreyas Nagabhushana Samaga</div>
+                <h3>A 2-parameter Persistence based Vectorization for Machine Learning</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">4:35 - 5:05 PM</div>
+                <div class="speaker">Govanni Granados</div>
+                <h3>Reconstruction of Extended Regions in EIT with a Robin Transmission Condition</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">5:10 - 5:40 PM</div>
+                <div class="speaker">Haoteng Yin</div>
+                <h3>Learning Scalable Structural Link Representations via Hash-based Methods</h3>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="time">5:45 - 6:00 PM</div>
+                <h3>Closing Remarks</h3>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
+        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+    </footer>
+</body>
+</html>
