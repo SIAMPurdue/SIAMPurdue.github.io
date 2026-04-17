@@ -289,21 +289,52 @@
                 <div class="time">12:05 - 12:25 PM</div>
                 <div class="topic">Optimization</div>
                 <h3>A New Decomposition Paradigm for Graph-structured Nonlinear Programs via Message Passing</h3>
-                <p>Abstract TBA.</p>
+                <p>We study finite-sum nonlinear programs with localized variable coupling encoded by a (hyper)graph. We
+                introduce a graph-compliant decomposition framework that brings message passing into continuous
+                optimization in a rigorous, implementable, and provable way. The (hyper)graph is partitioned into tree
+                clusters (hypertree factor graphs). At each iteration, agents update in parallel by solving local
+                subproblems whose objective splits into an {\it intra}-cluster term summarized by cost-to-go messages
+                from one min-sum sweep on the cluster tree, and an {\it inter}-cluster coupling term handled
+                Jacobi-style using the latest out-of-cluster variables. To reduce computation/communication, the method
+                supports graph-compliant surrogates that replace exact messages/local solves with compact
+                low-dimensional parametrizations; in hypergraphs, the same principle enables surrogate hyperedge
+                splitting, to tame heavy hyperedge overlaps while retaining finite-time intra-cluster message updates and
+                efficient computation/communication. We establish convergence for (strongly) convex and nonconvex
+                objectives, with topology- and partition-explicit rates that quantify curvature/coupling effects and guide
+                clustering and scalability. To our knowledge, this is the first convergent message-passing method on
+                loopy graphs.
+                    
+                Keywords: Distributed optimization \and Graph decomposition \and Message passing \and Block Jacobi
+                \and Hypergraph</p>
             </div>
             
             <div class="schedule-item">
                 <div class="time">12:30 - 12:50 PM</div>
                 <div class="topic">Optimization</div>
                 <h3>Adaptive Decentralized Composite Optimization via Three-Operator Splitting</h3>
-                <p>Abstract TBA.</p>
+                <p>We study decentralized optimization over networks, where agents minimize a sum of {\it locally} smooth
+                (strongly) convex losses and plus a nonsmooth convex extended value term. We propose
+                decentralized methods wherein agents {\it adaptively} adjust their stepsize via local backtracking
+                procedures coupled with lightweight min-consensus protocols. Our design stems from a three-operator
+                splitting factorization applied to an equivalent reformulation of the problem. The reformulation is endowed
+                with a new BCV preconditioning metric, which enables efficient decentralized implementation and local
+                stepsize adjustments. We establish robust convergence guarantees. Under mere convexity, the proposed
+                methods converge with a sublinear rate. Under strong convexity of the sum-function, and assuming the
+                nonsmooth component is partly smooth, we further prove linear convergence. Numerical experiments
+                corroborate the theory and highlight the effectiveness of the proposed adaptive stepsize strategy.</p>
             </div>
             
             <div class="schedule-item">
                 <div class="time">12:55 - 1:15 PM</div>
                 <div class="topic">Statistics</div>
                 <h3>Inferring the efficient number of true signals using high-dimensional summary-level data</h3>
-                <p>Abstract TBA.</p>
+                <p>How many genetic variations actually drive a disease like schizophrenia or a trait like height? While
+                modern genetic studies provide massive amounts of data, the true biological signals are often blurred by
+                "Linkage Disequilibrium" —a natural correlation where neighboring genes are inherited together like a
+                package deal. This talk explores how we use mathematical modeling to deblur this data and isolate the
+                true genetic drivers from the background noise. By applying rigorous math to these large-scale datasets,
+                we can ensure that the tools scientists use to decode human health are accurate and reliable, helping to
+                prevent false conclusions in medical research.</p>
             </div>
 
             <div class="schedule-item break-item">
@@ -315,28 +346,72 @@
                 <div class="time">1:40 - 2:00 PM</div>
                 <div class="topic">Machine Learning</div>
                 <h3>Robust Estimation of a Sparse Linear Model: Provable Guarantees with Non-convexity</h3>
-                <p>Abstract TBA.</p>
+                <p>In this paper, we address the problem of sparse regression vector estimation in the presence of corrupted
+                samples, with a particular focus on accurately identifying the support. Traditional methods, such as the
+                Least Absolute Shrinkage and Selection Operator (LASSO), often fail in such scenarios, exhibiting
+                inconsistency. To tackle this challenge, we propose a combinatorial, non-convex, and robust variant of
+                LASSO framework, designed to enhance estimation accuracy under corruption. Our approach is
+                supported by theoretical guarantees, which establish its reliability and robustness. Our method also
+                handles corruption from heavy-tailed distributions, with only a few bounded moments. We validate our
+                theoretical results through extensive experiments, comparing the performance of our method against the
+                LASSO and its other robust variants. These comparisons highlight the efficacy of our framework,
+                demonstrating its practical applicability in sparse regression tasks involving corrupted data.</p>
             </div>
             
             <div class="schedule-item">
                 <div class="time">2:05 - 2:25 PM</div>
                 <div class="topic">Machine Learning</div>
                 <h3>Efficient NN Methods for Numerical PDEs</h3>
-                <p>Abstract TBA.</p>
+                <p>Approximating the solutions to partial differential equations (PDEs) by continuous piecewise linear
+                functions is the core idea of Finite Element Methods. In one dimension, the interval [0,1] is commonly
+                partitioned uniformly, and an approximation is obtained by using a continuous piecewise linear function
+                with respect to this partition. If more accuracy is needed, then more mesh points are added. Shallow
+                ReLU neural networks, as a class of approximating functions, generate functions that are continuous and
+                piecewise linear, but now the mesh points are parameters to be determined. In other words, when
+                optimizing some parameters in a neural network, we are moving the mesh. This feature is the one we are
+                interested in exploiting, since it can be helpful for problems where solutions are discontinuous and the
+                interface is unknown. However, this process of moving the mesh is a computationally intensive task that
+                brings several difficulties. I will talk about these difficulties and how to overcome them.</p>
             </div>
             
             <div class="schedule-item">
                 <div class="time">2:30 - 2:50 PM</div>
                 <div class="topic">Mathematical Modeling</div>
                 <h3>Group-theoretic analysis of one-dimensional elastic waveguides</h3>
-                <p>Abstract TBA.</p>
+                <p>Symmetry is a common feature in a wide variety of engineered objects, ranging from gears to architected
+                materials, and it crucially affects their vibration and waveguiding properties. This talk explores the deep
+                and elegant connection between symmetry and dynamics through the previously unexplored example of
+                wave propagation in prismatic rods.
+                    
+                Without assuming any prerequisites, fundamental notions of symmetry will be introduced using the
+                natural mathematical framework of group and representation theory. These mathematical concepts will be
+                applied to prismatic rods to classify the wave modes depending on the symmetries in their displacement
+                fields. Remarkably, the mode classification precedes any explicit computation. Familiar examples of the
+                classification, such as symmetric and antisymmetric modes, will emerge as special cases of the general
+                scheme. The modes are explicitly computed by a symmetry-adapted finite element method. By leveraging
+                symmetry principles, the computation time is reduced by upto 30% in cases where standard approaches
+                such as applying periodic boundary conditions are suboptimal. More generally, the techniques discussed
+                in this talk will apply to any linear dynamical systems exhibiting symmetries.</p>
             </div>
             
             <div class="schedule-item">
                 <div class="time">2:55 - 3:15 PM</div>
                 <div class="topic">Mathematical Modeling</div>
-                <h3>Computational modeling unveils the impact of tissue growth and vascular remodeling on the distribution of interstitial chemical species</h3>
-                <p>Abstract TBA.</p>
+                <h3>Computational modeling unveils the impact of tissue growth on the distribution of interstitial chemical species during angiogenesis</h3>
+                <p>Angiogenesis, the growth of new blood vessels from pre-existing vessels, plays a crucial role in
+                normal development, wound healing, and diseases such as cancer. Biochemical signals present
+                in the extravascular region, such as Vascular Endothelial Growth Factor (VEGF), are key
+                regulators in angiogenesis. Although the role of these signals has been well studied in vitro, in
+                vivo quantification of VEGF transport during angiogenesis remains challenging since it requires
+                computing VEGF transport on a growing, topologically changing geometry.
+                In this talk, I will show how we use computational modeling to study angiogenesis in an in vivo
+                setting, computing the transport of VEGF inside a growing chick embryo and analyzing how
+                tissue growth shapes their spatial distribution. The evolving vascular geometry is obtained from
+                time-lapse images of a growing chick embryo and represented implicitly via a phase-field
+                formulation, which tracks complex topological changes without mesh regeneration. Our
+                simulations demonstrate that tissue growth can significantly influence VEGF distribution. This
+                effect arises because the timescale of VEGF production and binding mechanics is comparable to
+                the timescale of the impact of tissue growth on VEGF.</p>
             </div>
             
             <div class="schedule-item">
