@@ -440,6 +440,209 @@ nav.primary ul li a.active {
     .intro-who h2 { font-size: 2em; }
 }
 
+/* ---------- Conference page (editorial layout) ---------- */
+.conf-hero {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 64px;
+    align-items: start;
+    padding: 16px 0 56px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+}
+.conf-hero-left .eyebrow { margin-bottom: 18px; }
+.conf-title {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 3.1em;
+    line-height: 1.08;
+    font-weight: 700;
+    color: var(--pu-black);
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+}
+.conf-lede {
+    font-size: 1.18em;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 620px;
+}
+.conf-status {
+    display: inline-block;
+    font-size: 0.95em;
+    color: var(--pu-steel);
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 22px;
+}
+.conf-hero-cta .link-arrow {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.05em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--pu-black);
+    text-decoration: none;
+    border-bottom: 2px solid var(--pu-gold);
+    padding-bottom: 4px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.conf-hero-cta .link-arrow:hover {
+    color: var(--pu-gold-dark);
+    border-bottom-color: var(--pu-gold-dark);
+    text-decoration: none;
+}
+.conf-hero-cta .link-arrow span {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+.conf-hero-cta .link-arrow:hover span { transform: translateX(4px); }
+
+.conf-hero-right {
+    border-top: 2px solid var(--pu-black);
+    padding-top: 8px;
+}
+.conf-meta-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+}
+.conf-meta-label {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pu-cool);
+}
+.conf-meta-value {
+    font-size: 1.05em;
+    color: var(--pu-black);
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.conf-section {
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border);
+}
+.conf-section-head { margin-bottom: 22px; }
+.conf-section-head .eyebrow { margin-bottom: 10px; }
+.conf-section-head h2 {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--pu-black);
+    line-height: 1.18;
+    letter-spacing: -0.005em;
+}
+.conf-section-head h2::after { content: none; }
+.conf-prose p {
+    font-size: 1.08em;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 760px;
+}
+
+.conf-format {
+    display: flex;
+    flex-direction: column;
+}
+.conf-format > div {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+    align-items: baseline;
+}
+.conf-format > div:last-child { border-bottom: 1px solid var(--border); }
+.conf-format dt {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.35em;
+    font-weight: 700;
+    color: var(--pu-black);
+    letter-spacing: 0.005em;
+}
+.conf-format dd {
+    font-size: 1.02em;
+    color: var(--pu-steel);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.conf-contact {
+    padding: 40px 0 60px;
+}
+.conf-contact .eyebrow { margin-bottom: 10px; }
+.conf-contact p {
+    font-size: 1.08em;
+    color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+    .conf-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 36px;
+    }
+    .conf-title { font-size: 2.3em; }
+    .conf-format > div { grid-template-columns: 1fr; gap: 8px; }
+    .conf-meta-row { grid-template-columns: 110px 1fr; }
+}
+
+/* ---------- Past Conferences list ---------- */
+.past-conferences {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.past-conferences li {
+    border-top: 1px solid var(--border);
+}
+.past-conferences li:last-child {
+    border-bottom: 1px solid var(--border);
+}
+.past-conferences a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 4px;
+    text-decoration: none;
+    color: var(--text);
+    transition: padding 0.2s ease, color 0.2s ease;
+}
+.past-conferences a:hover {
+    padding-left: 10px;
+    text-decoration: none;
+}
+.past-conferences .pc-year {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--pu-black);
+    min-width: 72px;
+}
+.past-conferences .pc-label {
+    flex: 1;
+    color: var(--pu-steel);
+    font-size: 1em;
+}
+.past-conferences .pc-arrow {
+    color: var(--pu-gold-dark);
+    font-weight: 700;
+    font-size: 1.15em;
+    transition: transform 0.2s ease;
+}
+.past-conferences a:hover .pc-year { color: var(--pu-gold-dark); }
+.past-conferences a:hover .pc-arrow { transform: translateX(5px); }
+
 /* ---------- Quick-links grid (homepage) ---------- */
 .quicklinks {
     display: grid;
