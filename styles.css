@@ -713,8 +713,8 @@ nav.primary ul li a.active {
 footer.site-footer {
     background: var(--pu-black);
     color: #d8d8d8;
-    padding: 40px 20px 24px;
-    border-top: 6px solid var(--pu-gold);
+    padding: 16px 20px;
+    border-top: 4px solid var(--pu-gold);
     margin-top: 60px;
 }
 .footer-inner {
@@ -754,12 +754,12 @@ footer.site-footer {
 .footer-bottom {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 18px;
     text-align: center;
-    color: #8e8e8e;
-    font-size: 0.85em;
+    color: #bdbdbd;
+    font-size: 0.88em;
 }
 .footer-bottom a { color: var(--pu-gold); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 780px) {
