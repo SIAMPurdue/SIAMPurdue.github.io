@@ -71,7 +71,6 @@ a:hover { text-decoration: underline; }
 .brandbar .pu-wordmark img {
     height: 28px;
     width: auto;
-    filter: brightness(0) invert(1);
 }
 
 /* ---------- Header: white with two logos, gold accent ---------- */
@@ -750,7 +749,8 @@ footer.site-footer {
     margin-bottom: 12px;
     flex-wrap: wrap;
 }
-.footer-logos img { height: 36px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-logos img { height: 36px; width: auto; }
+.footer-logos img.logo-siam { filter: brightness(0) invert(1); opacity: 0.9; }
 .footer-bottom {
     max-width: 1200px;
     margin: 0 auto;
