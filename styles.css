@@ -295,67 +295,90 @@ nav.primary ul li a.active {
 
 /* ---------- About (homepage) ---------- */
 .about-section {
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 40px 44px;
-    margin-bottom: 60px;
+    background: transparent;
+    border: none;
+    padding: 0 0 24px;
+    margin: 0 auto 34px;
+    max-width: 980px;
 }
 .about-section h2 {
     color: var(--pu-black);
-    font-size: 1.6em;
-    margin-bottom: 14px;
+    font-size: 2em;
+    margin-bottom: 10px;
     font-weight: 700;
+    letter-spacing: 0.01em;
 }
 .about-section h2::after {
     content: none;
 }
 .about-section p {
-    font-size: 1.08em;
+    font-size: 1.12em;
     color: var(--text-muted);
-    line-height: 1.8;
-    max-width: 900px;
+    line-height: 1.75;
+    max-width: 70ch;
 }
 
 /* ---------- Quick-links grid (homepage) ---------- */
 .quicklinks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
     margin-bottom: 60px;
 }
 .quicklink {
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 28px 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
     text-decoration: none;
     color: var(--text);
-    position: relative;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.quicklink::before {
-    content: none;
+    transition: color 0.2s ease;
 }
 .quicklink:hover {
-    transform: translateY(-4px);
-    border-color: var(--border);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-decoration: none;
+}
+.quicklink + .quicklink {
+    border-left: 1px solid var(--border);
+    padding-left: 34px;
 }
 .quicklink h3 {
     color: var(--pu-black);
-    font-size: 1.2em;
+    font-size: 1.55em;
+    font-family: "Archivo Narrow", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-weight: 700;
-    margin-bottom: 8px;
+    line-height: 1.12;
+    margin-bottom: 10px;
 }
-.quicklink p { color: var(--pu-steel); font-size: 0.96em; }
+.quicklink p {
+    color: var(--pu-steel);
+    font-size: 1.04em;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
 .quicklink .arrow {
-    color: var(--pu-gold-dark);
+    color: var(--pu-black);
     font-weight: 700;
     margin-top: 12px;
     display: inline-block;
     letter-spacing: 0.08em;
-    font-size: 0.85em;
+    font-size: 0.8em;
     text-transform: uppercase;
+}
+.quicklink:hover .arrow { color: var(--pu-gold-dark); }
+
+@media (max-width: 980px) {
+    .quicklinks {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding-top: 18px;
+    }
+    .quicklink + .quicklink {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 18px;
+    }
 }
 
 /* ---------- Officers grid ---------- */
