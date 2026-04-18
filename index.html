@@ -10,144 +10,202 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #fafbfc;
         }
-        
+
         header {
-            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
-            color: white;
-            padding: 40px 20px;
+            background: #ffffff;
+            color: #2c5282;
+            padding: 35px 20px 30px;
             text-align: center;
+            border-bottom: 4px solid #00A896;
         }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
         }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+
+        .header-logo img {
+            height: 85px;
+            width: auto;
+            display: block;
         }
-        
+
+        .header-divider {
+            width: 2px;
+            height: 70px;
+            background-color: #e2e8f0;
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header-text h1 {
+            font-size: 2em;
+            color: #0B7A9F;
+            margin-bottom: 4px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header-text p {
+            font-size: 1.1em;
+            color: #4a5568;
+            font-weight: 400;
+        }
+
         nav {
             background-color: #2c5282;
             padding: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         nav ul li {
             margin: 0;
             position: relative;
         }
-        
+
         nav ul li a {
             display: block;
-            padding: 15px 25px;
+            padding: 15px 28px;
             color: white;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.25s ease;
+            font-weight: 500;
         }
-        
+
         nav ul li a:hover,
         nav ul li a.active {
             background-color: #0B7A9F;
         }
-        
+
         .dropdown {
             position: relative;
         }
-        
+
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #2c5282;
-            min-width: 200px;
+            min-width: 210px;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
             top: 100%;
             left: 0;
         }
-        
+
         .dropdown-content a {
             padding: 12px 20px;
             display: block;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
-        
+
         .dropdown-content a:hover {
             background-color: #0B7A9F;
         }
-        
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        
+
         .dropdown > a::after {
             content: ' ▾';
             font-size: 0.8em;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
-        
+
         .section-title {
             text-align: center;
             font-size: 2em;
             margin-bottom: 40px;
             color: #2c5282;
+            font-weight: 600;
         }
-        
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #0B7A9F 0%, #00A896 100%);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
         .about-section {
-            background-color: #f0f9ff;
-            padding: 40px;
-            border-radius: 8px;
-            margin-bottom: 50px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6fffa 100%);
+            padding: 50px 40px;
+            border-radius: 12px;
+            margin-bottom: 60px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-        
+
+        .about-section h2 {
+            color: #2c5282;
+            font-size: 1.8em;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
         .about-section p {
             font-size: 1.1em;
             max-width: 800px;
             margin: 0 auto;
-            color: #2c5282;
+            color: #2d3748;
+            line-height: 1.8;
         }
-        
+
         .officers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 20px;
         }
-        
+
         .officer-card {
             background: white;
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 28px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #edf2f7;
         }
-        
+
         .officer-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 24px rgba(11, 122, 159, 0.15);
+            border-color: #00A896;
         }
-        
+
         .officer-photo {
             width: 150px;
             height: 150px;
@@ -160,55 +218,94 @@
             font-size: 3em;
             color: white;
             overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        
+
         .officer-photo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .officer-name {
-            font-size: 1.3em;
-            font-weight: bold;
+            font-size: 1.25em;
+            font-weight: 600;
             color: #2d3748;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        
+
         .officer-position {
             color: #0B7A9F;
-            font-weight: 600;
-            font-size: 1em;
+            font-weight: 500;
+            font-size: 0.98em;
         }
-        
+
         footer {
             background-color: #2c5282;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+            padding: 30px 20px;
+            margin-top: 60px;
         }
-        
+
+        .footer-logo {
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.85;
+        }
+
         footer p {
             margin: 5px 0;
+            font-size: 0.95em;
         }
-        
+
         footer a {
-            color: #00A896;
+            color: #7fffd4;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .header-divider {
+                width: 60px;
+                height: 2px;
+            }
+            .header-text {
+                text-align: center;
+            }
+            .header-logo img {
+                height: 65px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>SIAM Student Chapter</h1>
-        <p>Purdue University</p>
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="siam_logo.png" alt="SIAM - Society for Industrial and Applied Mathematics">
+            </div>
+            <div class="header-divider"></div>
+            <div class="header-text">
+                <h1>Student Chapter</h1>
+                <p>Purdue University</p>
+            </div>
+        </div>
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -224,13 +321,13 @@
             <li><a href="social.html">Social Events</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
         <section class="about-section">
             <h2>About Us</h2>
             <p>We are a student organization dedicated to promoting applied mathematics, computational science, and data science to young mathematicians and scientists around the world.</p>
         </section>
-        
+
         <section class="officers-section">
             <h2 class="section-title">Meet Our Officers</h2>
             <div class="officers-grid">
@@ -241,7 +338,7 @@
                     <div class="officer-name">Tong Ding</div>
                     <div class="officer-position">President</div>
                 </div>
-                
+
                 <div class="officer-card">
                     <div class="officer-photo">
                         <img src="images/officers/jeffrey-utley.JPG" alt="Jeffrey Utley">
@@ -249,7 +346,7 @@
                     <div class="officer-name">Jeffrey Utley</div>
                     <div class="officer-position">Vice President</div>
                 </div>
-                
+
                 <div class="officer-card">
                     <div class="officer-photo">
                         <img src="images/officers/xiaoyu-liu.jpg" alt="Xiaoyu Liu">
@@ -257,7 +354,7 @@
                     <div class="officer-name">Xiaoyu Liu</div>
                     <div class="officer-position">Treasurer</div>
                 </div>
-                
+
                 <div class="officer-card">
                     <div class="officer-photo">
                         <img src="images/officers/yineng-chen.jpg" alt="Yineng Chen">
@@ -265,7 +362,7 @@
                     <div class="officer-name">Yineng Chen</div>
                     <div class="officer-position">Treasurer</div>
                 </div>
-                
+
                 <div class="officer-card">
                     <div class="officer-photo">
                         <img src="images/officers/suyi-gao.jpg" alt="Stanley Gao">
@@ -273,7 +370,7 @@
                     <div class="officer-name">Stanley (Suyi) Gao</div>
                     <div class="officer-position">Web Master</div>
                 </div>
-                
+
                 <div class="officer-card">
                     <div class="officer-photo">
                         <img src="images/officers/cesar-herrera.jpg" alt="Cesar Herrera">
@@ -284,10 +381,13 @@
             </div>
         </section>
     </div>
-    
+
     <footer>
+        <div class="footer-logo">
+            <img src="siam_logo.png" alt="SIAM">
+        </div>
         <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
-        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+        <p>&copy; 2026 SIAM Student Chapter &middot; Purdue University</p>
     </footer>
 </body>
 </html>
