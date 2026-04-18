@@ -84,37 +84,41 @@ header.site-header {
     padding: 28px 20px 26px;
 }
 .header-inner {
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(420px, 1fr) auto;
+    display: flex;
     align-items: center;
-    gap: 24px;
+    justify-content: space-between;
+    gap: 32px;
 }
 .header-logos {
     display: flex;
     align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
+    gap: 16px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 }
 .header-logos img {
     display: block;
     width: auto;
 }
-.header-logos .logo-purdue { height: 48px; }
-.header-logos .logo-siam   { height: 44px; }
+.header-logos .logo-purdue { height: 52px; }
+.header-logos .logo-siam   { height: 36px; }
 .header-logos .logo-divider {
     width: 1px;
-    height: 42px;
+    height: 38px;
     background: var(--border);
 }
-.header-titles { text-align: right; }
+.header-titles {
+    text-align: right;
+    margin-left: auto;
+}
 .header-titles h1 {
     font-family: "Archivo Narrow", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: var(--pu-black);
-    font-size: 2.1em;
+    font-size: 1.95em;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.025em;
     text-transform: uppercase;
     line-height: 1.1;
     white-space: nowrap;
@@ -126,9 +130,17 @@ header.site-header {
 }
 .header-titles .sub {
     color: var(--pu-steel);
-    font-size: 1.05em;
+    font-size: 1.02em;
     margin-top: 6px;
     letter-spacing: 0.02em;
+}
+
+@media (max-width: 1200px) {
+    .header-inner { gap: 24px; }
+    .header-logos .logo-purdue { height: 46px; }
+    .header-logos .logo-siam { height: 32px; }
+    .header-logos .logo-divider { height: 34px; }
+    .header-titles h1 { font-size: 1.75em; }
 }
 
 /* ---------- Primary Navigation ---------- */
@@ -726,12 +738,18 @@ footer.site-footer {
 /* ---------- Responsive ---------- */
 @media (max-width: 780px) {
     .header-inner {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
         text-align: center;
     }
-    .header-titles { text-align: center; }
+    .header-titles { text-align: center; margin-left: 0; }
+    .header-titles h1 { font-size: 1.45em; white-space: normal; }
+    .header-titles .sub { font-size: 0.95em; }
     .header-logos { justify-content: center; }
+    .header-logos .logo-purdue { height: 42px; }
+    .header-logos .logo-siam { height: 28px; }
+    .header-logos .logo-divider { height: 30px; }
     .hero h1 { font-size: 2.1em; }
     nav.primary ul { justify-content: center; }
     nav.primary ul li a { padding: 14px 14px; font-size: 0.88em; }
