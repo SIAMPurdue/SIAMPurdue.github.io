@@ -3,233 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Conference - SIAM Student Chapter</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: #2c5282;
-            padding: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        nav ul li {
-            margin: 0;
-            position: relative;
-        }
-        
-        nav ul li a {
-            display: block;
-            padding: 15px 25px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        nav ul li a:hover,
-        nav ul li a.active {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #2c5282;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-        }
-        
-        .dropdown-content a {
-            padding: 12px 20px;
-            display: block;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown > a::after {
-            content: ' ▾';
-            font-size: 0.8em;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .page-title {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #2c5282;
-        }
-        
-        .page-subtitle {
-            text-align: center;
-            font-size: 1.2em;
-            color: #4a5568;
-            margin-bottom: 50px;
-        }
-        
-        .conference-hero {
-            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 12px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .conference-hero h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        
-        .conference-hero p {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        
-        .info-section {
-            background: white;
-            border-radius: 8px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .info-section h3 {
-            font-size: 1.8em;
-            color: #0B7A9F;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #0B7A9F;
-            padding-bottom: 10px;
-        }
-        
-        .info-section p {
-            color: #4a5568;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .info-section ul {
-            margin-left: 30px;
-            color: #4a5568;
-        }
-        
-        .info-section ul li {
-            margin-bottom: 10px;
-            font-size: 1.05em;
-        }
-        
-        .highlight-box {
-            background-color: #f0f9ff;
-            border-left: 5px solid #00A896;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .highlight-box strong {
-            color: #00A896;
-        }
-        
-        .two-column {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .column-card {
-            background: #f0f9ff;
-            padding: 30px;
-            border-radius: 8px;
-        }
-        
-        .column-card h4 {
-            font-size: 1.4em;
-            color: #2c5282;
-            margin-bottom: 15px;
-        }
-        
-        footer {
-            background-color: #2c5282;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
-            color: #00A896;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Student Conference — SIAM Student Chapter at Purdue</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>SIAM Student Chapter</h1>
-        <p>Purdue University</p>
+    <div class="brandbar">
+        <div class="brandbar-inner">
+            <div class="pu-wordmark">
+                <img src="images/PU.png" alt="Purdue University">
+                <span>Purdue University</span>
+            </div>
+            <div><a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Department of Mathematics</a></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logos">
+                <img src="images/PU.png" alt="Purdue University" class="logo-purdue">
+                <span class="logo-divider"></span>
+                <img src="images/siam_logo.png" alt="SIAM" class="logo-siam">
+            </div>
+            <div class="header-titles">
+                <div class="eyebrow">Student Chapter</div>
+                <h1>SIAM at Purdue</h1>
+                <div class="sub">Society for Industrial and Applied Mathematics</div>
+            </div>
+        </div>
     </header>
-    
-    <nav>
+
+    <nav class="primary">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="events.html">Current Events</a></li>
@@ -244,48 +47,47 @@
             <li><a href="social.html">Social Events</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
         <div class="conference-hero">
-            <h2>Upcoming Student Conference</h2>
-            <p>📅 Date: April 2026</p>
-            <p>📍 Location: TBA</p>
-            <p>🎯 Theme: TBA</p>
-        </div>
-        
-        <div class="info-section">
-            <h3>About the Conference</h3>
-            <p>The annual SIAM Student Conference brings together undergraduate and graduate students interested in applied mathematics, computational science, and data science. This conference provides a platform for students to present their research, learn from peers, and network with faculty and industry professionals.</p>
-            
-            <div class="highlight-box">
-                <p><strong>Registration:</strong> Details coming soon!</p>
+            <h2>Upcoming <span class="accent">Student Conference</span></h2>
+            <p><strong>Date:</strong> April 18, 2026</p>
+            <p><strong>Location:</strong> MATH 175, Purdue University</p>
+            <p><strong>Invited Speaker:</strong> Prof. Rongjie Lai</p>
+            <div class="hero-cta" style="margin-top: 22px;">
+                <a href="conference-2026.html" class="btn btn-gold">View 2026 Program</a>
             </div>
         </div>
-        
+
+        <div class="info-section">
+            <h3>About the Conference</h3>
+            <p>The annual Purdue SIAM Student Conference brings together undergraduate and graduate students interested in applied mathematics, computational science, and data science. The conference provides a platform for students to present their research, learn from peers, and network with faculty and industry professionals.</p>
+            <div class="highlight-box">
+                <p><strong>Registration:</strong> Details coming soon.</p>
+            </div>
+        </div>
+
         <div class="info-section">
             <h3>Conference Format</h3>
             <div class="two-column">
                 <div class="column-card">
                     <h4>Oral Presentations</h4>
-                    <p>Students will have the opportunity to present their research in 15-20 minute talks, followed by a Q&A session.</p>
+                    <p>Students present their research in 15–20 minute talks followed by a short Q&amp;A.</p>
                 </div>
-                
-                
                 <div class="column-card">
                     <h4>Keynote Speakers</h4>
-                    <p>Invited talks from distinguished researchers and industry professionals in applied mathematics and computational science.</p>
+                    <p>Invited talks from distinguished researchers in applied mathematics and computational science.</p>
                 </div>
-                
                 <div class="column-card">
-                    <h4>Networking Events</h4>
-                    <p>Coffee breaks, lunch sessions, and social hours designed to facilitate networking among students and faculty.</p>
+                    <h4>Networking</h4>
+                    <p>Coffee breaks, lunch sessions, and social hours to encourage conversation across departments.</p>
                 </div>
             </div>
         </div>
-        
+
         <div class="info-section">
             <h3>Call for Abstracts</h3>
-            <p>We invite submissions for oral presentations in all areas of applied mathematics, including but not limited to:</p>
+            <p>We invite submissions for oral presentations in all areas of applied mathematics, including:</p>
             <ul>
                 <li>Numerical analysis and scientific computing</li>
                 <li>Mathematical modeling and simulation</li>
@@ -295,31 +97,52 @@
                 <li>Applied differential equations</li>
                 <li>Computational fluid dynamics</li>
             </ul>
-            
             <div class="highlight-box">
                 <p><strong>Submission Deadline:</strong> TBA</p>
                 <p><strong>Notification:</strong> TBA</p>
             </div>
         </div>
-        
+
         <div class="info-section">
             <h3>Past Conferences</h3>
-            <p>View our past conferences:</p>
             <ul>
-                <li><a href="conference-2025.html" style="color: #0B7A9F; font-weight: 600;">Conference 2025</a></li>
-                <li><a href="conference-2024.html" style="color: #0B7A9F; font-weight: 600;">Conference 2024</a></li>
+                <li><a href="conference-2025.html">Conference 2025</a></li>
+                <li><a href="conference-2024.html">Conference 2024</a></li>
             </ul>
         </div>
-        
+
         <div class="info-section">
             <h3>Contact</h3>
-            <p>For questions about the conference, please contact us at <a href="mailto:siam@purdue.edu" style="color: #0B7A9F;">siam@purdue.edu</a></p>
+            <p>For questions about the conference, please email <a href="mailto:siam@purdue.edu">siam@purdue.edu</a>.</p>
         </div>
     </div>
-    
-    <footer>
-        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
-        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-logos">
+                    <img src="images/PU.png" alt="Purdue University">
+                    <img src="images/siam_logo.png" alt="SIAM">
+                </div>
+                <p>SIAM Student Chapter<br>Purdue University<br>West Lafayette, IN</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Current Events</a>
+                <a href="conference.html">Student Conference</a>
+                <a href="social.html">Social Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:siam@purdue.edu">siam@purdue.edu</a>
+                <a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Purdue Mathematics</a>
+                <a href="https://www.siam.org/" target="_blank" rel="noopener">SIAM National</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 SIAM Student Chapter · Purdue University
+        </div>
     </footer>
 </body>
 </html>

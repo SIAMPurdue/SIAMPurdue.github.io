@@ -3,228 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference 2026 - SIAM Student Chapter</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: #2c5282;
-            padding: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        nav ul li {
-            margin: 0;
-            position: relative;
-        }
-        
-        nav ul li a {
-            display: block;
-            padding: 15px 25px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        nav ul li a:hover,
-        nav ul li a.active {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #2c5282;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-        }
-        
-        .dropdown-content a {
-            padding: 12px 20px;
-            display: block;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown > a::after {
-            content: ' ▾';
-            font-size: 0.8em;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            min-height: 50vh;
-        }
-        
-        .page-title {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #2c5282;
-        }
-        
-        .schedule-section {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        
-        .schedule-item {
-            border-left: 4px solid #0B7A9F;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f0f9ff;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .schedule-item h3 {
-            color: #2c5282;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        
-        .schedule-item .time {
-            font-weight: bold;
-            color: #0B7A9F;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-        
-        .schedule-item .topic {
-            color: #00A896;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .schedule-item p {
-            color: #4a5568;
-            line-height: 1.8;
-        }
-        
-        .break-item {
-            border-left: 4px solid #00A896;
-            background-color: #f0fdfa;
-            text-align: center;
-            padding: 15px;
-        }
-        
-        .break-item .time {
-            color: #00A896;
-        }
-        
-        .speaker-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .speaker-info {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .speaker-info h3 {
-            color: #0B7A9F;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        .speaker-info h4 {
-            color: #4a5568;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .speaker-info p {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-        
-        footer {
-            background-color: #2c5282;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
-            color: #00A896;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Conference 2026 — SIAM Student Chapter at Purdue</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>SIAM Student Chapter</h1>
-        <p>Purdue University</p>
+    <div class="brandbar">
+        <div class="brandbar-inner">
+            <div class="pu-wordmark">
+                <img src="images/PU.png" alt="Purdue University">
+                <span>Purdue University</span>
+            </div>
+            <div><a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Department of Mathematics</a></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logos">
+                <img src="images/PU.png" alt="Purdue University" class="logo-purdue">
+                <span class="logo-divider"></span>
+                <img src="images/siam_logo.png" alt="SIAM" class="logo-siam">
+            </div>
+            <div class="header-titles">
+                <div class="eyebrow">Student Chapter</div>
+                <h1>SIAM at Purdue</h1>
+                <div class="sub">Society for Industrial and Applied Mathematics</div>
+            </div>
+        </div>
     </header>
-    
-    <nav>
+
+    <nav class="primary">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="events.html">Current Events</a></li>
@@ -239,193 +47,146 @@
             <li><a href="social.html">Social Events</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
-        <h1 class="page-title">Conference 2026</h1>
-        
-        <div class="schedule-section">
-            <p style="font-size: 1.1em; margin-bottom: 15px; color: #4a5568;">We will have the Third Annual Purdue SIAM Student Conference on <strong>April 18, 2026 in MATH 175</strong>! This event will feature 20 minute talks by graduate students and postdocs working in computational, industrial, and applied mathematics. Coffee, lunch, and a light breakfast will be provided!</p>
-            
-            <p style="font-size: 1.1em; margin-bottom: 15px; color: #4a5568;">This year, our invited speaker will be <strong>Rongjie Lai</strong> (see his bio below).</p>
-            
-            <p style="font-size: 1.1em; color: #4a5568;">We encourage students in the Math, CS, Stats, ECE, ME, and IE departments to attend this conference!</p>
+        <div class="conference-hero">
+            <h2>Third Annual <span class="accent">Purdue SIAM Student Conference</span></h2>
+            <p><strong>Date:</strong> April 18, 2026</p>
+            <p><strong>Location:</strong> MATH 175</p>
+            <p><strong>Invited Speaker:</strong> Prof. Rongjie Lai</p>
         </div>
-        
+
+        <div class="info-section">
+            <h3>Overview</h3>
+            <p>We are pleased to host the Third Annual Purdue SIAM Student Conference on <strong>April 18, 2026 in MATH 175</strong>. The conference features 20-minute talks by graduate students and postdocs working in computational, industrial, and applied mathematics. Coffee, lunch, and a light breakfast will be provided.</p>
+            <p>This year's invited speaker is <strong>Prof. Rongjie Lai</strong> (bio below).</p>
+            <p>We encourage students in the Math, CS, Statistics, ECE, ME, and IE departments to attend.</p>
+        </div>
+
         <div class="speaker-section">
-            <h2 style="color: #2c5282; font-size: 2em; margin-bottom: 20px;">🎤 Invited Speaker</h2>
+            <h2>Invited Speaker</h2>
             <div class="speaker-info">
                 <h3>Prof. Rongjie Lai</h3>
-                <h4>Professor | Purdue University</h4>
-                <p><strong>Time:</strong> 10:10 - 11:00 AM</p>
+                <h4>Professor · Purdue University</h4>
+                <p><strong>Time:</strong> 10:10 – 11:00 AM</p>
                 <p><strong>Title:</strong> Can Deep Networks Overcome the Curse of Dimensionality? A Complexity Perspective</p>
-                <p><strong>Abstract:</strong> Deep artificial neural networks (DNNs) have achieved remarkable success across various scientific and engineering domains. A fundamental question that arises is whether DNNs can overcome the curse of dimensionality. In this talk, I will discuss approximation and generalization analyses from our research that reveal how the complexity of DNNs depends on dimensionality. Through three key examples, I will illustrate that the complexity of DNNs scales exponentially with the intrinsic dimension rather than the ambient space dimension. First, I will explore how DNNs learn low-dimensional manifold structures from high-dimensional data and analyze their complexity. Second, I will examine neural operator learning for optimal control and mean-field control and their complexity characterization. Third, I will discuss neural operator learning for dynamical systems and its associated complexity. These results provide insights into the power and limitations of deep networks in high-dimensional settings.</p>
-                <p><strong>About the Speaker:</strong> Professor Rongjie Lai is a leading figure in applied and computational mathematics, currently a professor at Purdue University. His research develops mathematical and computational frameworks for imaging, data science, geometric learning, and analysis of manifold-structured data, with broad impact in variational PDEs, optimization, and machine learning. He has published over 80 peer-reviewed works with significant citations in areas spanning operator learning, mean-field games, and geometric methods. Prof. Lai’s contributions have been supported by major grants, including a National Science Foundation CAREER Award recognizing his work on geometry and learning for manifold-structured data, as well as funding from NSF’s SCALE MoDL program and NIH-sponsored projects, and collaborations with industry research (e.g., IBM AI Research). His work has been invited to major seminars and conference sessions that highlight advances in computational mathematics and geometric approaches to data science.</p>
+                <p><strong>Abstract:</strong> Deep artificial neural networks (DNNs) have achieved remarkable success across various scientific and engineering domains. A fundamental question that arises is whether DNNs can overcome the curse of dimensionality. This talk discusses approximation and generalization analyses that reveal how the complexity of DNNs depends on dimensionality. Through three key examples, the complexity of DNNs is shown to scale exponentially with the intrinsic dimension rather than the ambient space dimension: (1) DNNs learning low-dimensional manifold structures from high-dimensional data; (2) neural operator learning for optimal control and mean-field control; and (3) neural operator learning for dynamical systems. These results provide insights into the power and limitations of deep networks in high-dimensional settings.</p>
+                <p><strong>About the Speaker:</strong> Prof. Rongjie Lai is a leading figure in applied and computational mathematics at Purdue University. His research develops mathematical and computational frameworks for imaging, data science, geometric learning, and analysis of manifold-structured data, with broad impact across variational PDEs, optimization, and machine learning. He has published over 80 peer-reviewed works with significant citations in operator learning, mean-field games, and geometric methods. His contributions have been supported by major grants, including an NSF CAREER Award, NSF's SCALE MoDL program, and NIH-sponsored projects, along with industry collaborations.</p>
             </div>
         </div>
-           
+
         <div class="schedule-section">
-            <h2 style="color: #2c5282; font-size: 2em; margin-bottom: 30px;">Conference Schedule</h2>
+            <h2>Conference Schedule</h2>
 
             <div class="schedule-item break-item">
-                <div class="time">9:45 - 10:00 AM</div>
-                <h3>🍽️ Light Breakfast</h3>
+                <div class="time">9:45 – 10:00 AM</div>
+                <h3>Light Breakfast</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">10:00 - 10:10 AM</div>
+                <div class="time">10:00 – 10:10 AM</div>
                 <h3>Opening Remarks</h3>
             </div>
 
             <div class="schedule-item">
-                <div class="time">10:10 - 11:00 AM</div>
-                <div class="topic">Invited Speaker</div>
+                <div class="time">10:10 – 11:00 AM</div>
+                <span class="topic">Invited Speaker</span>
                 <h3>Prof. Rongjie Lai</h3>
                 <p>See invited speaker section above for details.</p>
             </div>
-            
+
             <div class="schedule-item break-item">
-                <div class="time">11:05 AM - 12:05 PM</div>
-                <h3>🍽️ Lunch Break</h3>
+                <div class="time">11:05 AM – 12:05 PM</div>
+                <h3>Lunch Break</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">12:05 - 12:25 PM</div>
-                <div class="topic">Optimization</div>
+                <div class="time">12:05 – 12:25 PM</div>
+                <span class="topic">Optimization</span>
                 <h3>A New Decomposition Paradigm for Graph-structured Nonlinear Programs via Message Passing</h3>
-                <p>We study finite-sum nonlinear programs with localized variable coupling encoded by a (hyper)graph. We
-                introduce a graph-compliant decomposition framework that brings message passing into continuous
-                optimization in a rigorous, implementable, and provable way. The (hyper)graph is partitioned into tree
-                clusters (hypertree factor graphs). At each iteration, agents update in parallel by solving local
-                subproblems whose objective splits into an <i>intra</i>-cluster term summarized by cost-to-go messages
-                from one min-sum sweep on the cluster tree, and an <i>inter</i>-cluster coupling term handled
-                Jacobi-style using the latest out-of-cluster variables. To reduce computation/communication, the method
-                supports graph-compliant surrogates that replace exact messages/local solves with compact
-                low-dimensional parametrizations; in hypergraphs, the same principle enables surrogate hyperedge
-                splitting, to tame heavy hyperedge overlaps while retaining finite-time intra-cluster message updates and
-                efficient computation/communication. We establish convergence for (strongly) convex and nonconvex
-                objectives, with topology- and partition-explicit rates that quantify curvature/coupling effects and guide
-                clustering and scalability. To our knowledge, this is the first convergent message-passing method on
-                loopy graphs.
-                <br>
-                Keywords: Distributed optimization, Graph decomposition, Message passing, Block Jacobi, Hypergraph</p>
+                <p>We study finite-sum nonlinear programs with localized variable coupling encoded by a (hyper)graph. A graph-compliant decomposition framework brings message passing into continuous optimization in a rigorous, implementable, and provable way. The (hyper)graph is partitioned into tree clusters (hypertree factor graphs); at each iteration, agents update in parallel by solving local subproblems whose objective splits into an <i>intra</i>-cluster term summarized by cost-to-go messages from one min-sum sweep and an <i>inter</i>-cluster coupling term handled Jacobi-style. The method supports graph-compliant surrogates and surrogate hyperedge splitting. We establish convergence for (strongly) convex and nonconvex objectives with topology- and partition-explicit rates. To our knowledge, this is the first convergent message-passing method on loopy graphs.<br><em>Keywords:</em> Distributed optimization, Graph decomposition, Message passing, Block Jacobi, Hypergraph</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">12:30 - 12:50 PM</div>
-                <div class="topic">Optimization</div>
+                <div class="time">12:30 – 12:50 PM</div>
+                <span class="topic">Optimization</span>
                 <h3>Adaptive Decentralized Composite Optimization via Three-Operator Splitting</h3>
-                <p>We study decentralized optimization over networks, where agents minimize a sum of <i>locally</i> smooth
-                (strongly) convex losses and plus a nonsmooth convex extended value term. We propose
-                decentralized methods wherein agents <i>adaptively</i> adjust their stepsize via local backtracking
-                procedures coupled with lightweight min-consensus protocols. Our design stems from a three-operator
-                splitting factorization applied to an equivalent reformulation of the problem. The reformulation is endowed
-                with a new BCV preconditioning metric, which enables efficient decentralized implementation and local
-                stepsize adjustments. We establish robust convergence guarantees. Under mere convexity, the proposed
-                methods converge with a sublinear rate. Under strong convexity of the sum-function, and assuming the
-                nonsmooth component is partly smooth, we further prove linear convergence. Numerical experiments
-                corroborate the theory and highlight the effectiveness of the proposed adaptive stepsize strategy.</p>
+                <p>We study decentralized optimization over networks, where agents minimize a sum of locally smooth (strongly) convex losses plus a nonsmooth convex extended-value term. Agents adaptively adjust their stepsize via local backtracking coupled with lightweight min-consensus protocols. The design stems from a three-operator splitting factorization with a new BCV preconditioning metric. Under mere convexity the methods converge sublinearly; under strong convexity of the sum and partial smoothness of the nonsmooth component, linear convergence is proved. Numerical experiments corroborate the theory.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">12:55 - 1:15 PM</div>
-                <div class="topic">Statistics</div>
+                <div class="time">12:55 – 1:15 PM</div>
+                <span class="topic">Statistics</span>
                 <h3>Inferring the efficient number of true signals using high-dimensional summary-level data</h3>
-                <p>How many genetic variations actually drive a disease like schizophrenia or a trait like height? While
-                modern genetic studies provide massive amounts of data, the true biological signals are often blurred by
-                "Linkage Disequilibrium" —a natural correlation where neighboring genes are inherited together like a
-                package deal. This talk explores how we use mathematical modeling to deblur this data and isolate the
-                true genetic drivers from the background noise. By applying rigorous math to these large-scale datasets,
-                we can ensure that the tools scientists use to decode human health are accurate and reliable, helping to
-                prevent false conclusions in medical research.</p>
+                <p>How many genetic variations actually drive a disease like schizophrenia or a trait like height? Modern genetic studies provide massive amounts of data, but true biological signals are often blurred by "Linkage Disequilibrium" — a natural correlation where neighboring genes are inherited together. This talk explores how mathematical modeling deblurs this data to isolate true genetic drivers from background noise, ensuring the tools scientists use to decode human health are accurate and reliable.</p>
             </div>
 
             <div class="schedule-item break-item">
-                <div class="time">1:20 - 1:40 PM</div>
-                <h3>☕ Coffee Break</h3>
+                <div class="time">1:20 – 1:40 PM</div>
+                <h3>Coffee Break</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">1:40 - 2:00 PM</div>
-                <div class="topic">Machine Learning</div>
+                <div class="time">1:40 – 2:00 PM</div>
+                <span class="topic">Machine Learning</span>
                 <h3>Robust Estimation of a Sparse Linear Model: Provable Guarantees with Non-convexity</h3>
-                <p>In this paper, we address the problem of sparse regression vector estimation in the presence of corrupted
-                samples, with a particular focus on accurately identifying the support. Traditional methods, such as the
-                Least Absolute Shrinkage and Selection Operator (LASSO), often fail in such scenarios, exhibiting
-                inconsistency. To tackle this challenge, we propose a combinatorial, non-convex, and robust variant of
-                LASSO framework, designed to enhance estimation accuracy under corruption. Our approach is
-                supported by theoretical guarantees, which establish its reliability and robustness. Our method also
-                handles corruption from heavy-tailed distributions, with only a few bounded moments. We validate our
-                theoretical results through extensive experiments, comparing the performance of our method against the
-                LASSO and its other robust variants. These comparisons highlight the efficacy of our framework,
-                demonstrating its practical applicability in sparse regression tasks involving corrupted data.</p>
+                <p>This paper addresses sparse regression vector estimation in the presence of corrupted samples, focusing on accurate support identification. Traditional methods such as LASSO often fail and exhibit inconsistency. We propose a combinatorial, non-convex, and robust LASSO variant supported by theoretical guarantees establishing reliability and robustness, including under heavy-tailed corruption with only a few bounded moments. Extensive experiments validate the theory and compare against LASSO and its robust variants.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">2:05 - 2:25 PM</div>
-                <div class="topic">Machine Learning</div>
+                <div class="time">2:05 – 2:25 PM</div>
+                <span class="topic">Machine Learning</span>
                 <h3>Efficient NN Methods for Numerical PDEs</h3>
-                <p>Approximating the solutions to partial differential equations (PDEs) by continuous piecewise linear
-                functions is the core idea of Finite Element Methods. In one dimension, the interval [0,1] is commonly
-                partitioned uniformly, and an approximation is obtained by using a continuous piecewise linear function
-                with respect to this partition. If more accuracy is needed, then more mesh points are added. Shallow
-                ReLU neural networks, as a class of approximating functions, generate functions that are continuous and
-                piecewise linear, but now the mesh points are parameters to be determined. In other words, when
-                optimizing some parameters in a neural network, we are moving the mesh. This feature is the one we are
-                interested in exploiting, since it can be helpful for problems where solutions are discontinuous and the
-                interface is unknown. However, this process of moving the mesh is a computationally intensive task that
-                brings several difficulties. I will talk about these difficulties and how to overcome them.</p>
+                <p>Approximating PDE solutions by continuous piecewise linear functions is the core of Finite Element Methods. Shallow ReLU networks generate continuous piecewise linear functions whose mesh points are parameters — so optimizing a network moves the mesh. This is useful when solutions are discontinuous and the interface is unknown, but moving the mesh is computationally intensive. The talk discusses these difficulties and how to overcome them.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">2:30 - 2:50 PM</div>
-                <div class="topic">Mathematical Modeling</div>
+                <div class="time">2:30 – 2:50 PM</div>
+                <span class="topic">Mathematical Modeling</span>
                 <h3>Group-theoretic analysis of one-dimensional elastic waveguides</h3>
-                <p>Symmetry is a common feature in a wide variety of engineered objects, ranging from gears to architected
-                materials, and it crucially affects their vibration and waveguiding properties. This talk explores the deep
-                and elegant connection between symmetry and dynamics through the previously unexplored example of
-                wave propagation in prismatic rods.
-                <br>
-                Without assuming any prerequisites, fundamental notions of symmetry will be introduced using the
-                natural mathematical framework of group and representation theory. These mathematical concepts will be
-                applied to prismatic rods to classify the wave modes depending on the symmetries in their displacement
-                fields. Remarkably, the mode classification precedes any explicit computation. Familiar examples of the
-                classification, such as symmetric and antisymmetric modes, will emerge as special cases of the general
-                scheme. The modes are explicitly computed by a symmetry-adapted finite element method. By leveraging
-                symmetry principles, the computation time is reduced by upto 30% in cases where standard approaches
-                such as applying periodic boundary conditions are suboptimal. More generally, the techniques discussed
-                in this talk will apply to any linear dynamical systems exhibiting symmetries.</p>
+                <p>Symmetry is a common feature in engineered objects and crucially affects their vibration and waveguiding properties. This talk explores the connection between symmetry and dynamics through wave propagation in prismatic rods. Group- and representation-theoretic concepts classify wave modes by the symmetries in their displacement fields; familiar symmetric and antisymmetric modes emerge as special cases. A symmetry-adapted finite element method reduces computation time by up to 30% in cases where standard periodic boundary conditions are suboptimal.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">2:55 - 3:15 PM</div>
-                <div class="topic">Mathematical Modeling</div>
+                <div class="time">2:55 – 3:15 PM</div>
+                <span class="topic">Mathematical Modeling</span>
                 <h3>Computational modeling unveils the impact of tissue growth on the distribution of interstitial chemical species during angiogenesis</h3>
-                <p>Angiogenesis, the growth of new blood vessels from pre-existing vessels, plays a crucial role in
-                normal development, wound healing, and diseases such as cancer. Biochemical signals present
-                in the extravascular region, such as Vascular Endothelial Growth Factor (VEGF), are key
-                regulators in angiogenesis. Although the role of these signals has been well studied in vitro, in
-                vivo quantification of VEGF transport during angiogenesis remains challenging since it requires
-                computing VEGF transport on a growing, topologically changing geometry.
-                In this talk, I will show how we use computational modeling to study angiogenesis in an in vivo
-                setting, computing the transport of VEGF inside a growing chick embryo and analyzing how
-                tissue growth shapes their spatial distribution. The evolving vascular geometry is obtained from
-                time-lapse images of a growing chick embryo and represented implicitly via a phase-field
-                formulation, which tracks complex topological changes without mesh regeneration. Our
-                simulations demonstrate that tissue growth can significantly influence VEGF distribution. This
-                effect arises because the timescale of VEGF production and binding mechanics is comparable to
-                the timescale of the impact of tissue growth on VEGF.</p>
+                <p>Angiogenesis plays a crucial role in development, wound healing, and diseases such as cancer. This work studies angiogenesis in an in vivo setting, computing VEGF transport inside a growing chick embryo and analyzing how tissue growth shapes its spatial distribution. The evolving vascular geometry is obtained from time-lapse images and represented implicitly via a phase-field formulation, tracking complex topological changes without mesh regeneration. Simulations show that tissue growth significantly influences VEGF distribution.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">3:20 - 3:30 PM</div>
+                <div class="time">3:20 – 3:30 PM</div>
                 <h3>Closing Remarks</h3>
             </div>
         </div>
     </div>
-    
-    <footer>
-        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
-        <p>&copy; 2026 SIAM Student Chapter - Purdue University</p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-logos">
+                    <img src="images/PU.png" alt="Purdue University">
+                    <img src="images/siam_logo.png" alt="SIAM">
+                </div>
+                <p>SIAM Student Chapter<br>Purdue University<br>West Lafayette, IN</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Current Events</a>
+                <a href="conference.html">Student Conference</a>
+                <a href="social.html">Social Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:siam@purdue.edu">siam@purdue.edu</a>
+                <a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Purdue Mathematics</a>
+                <a href="https://www.siam.org/" target="_blank" rel="noopener">SIAM National</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 SIAM Student Chapter · Purdue University
+        </div>
     </footer>
 </body>
 </html>

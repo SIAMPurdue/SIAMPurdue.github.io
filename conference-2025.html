@@ -3,256 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference 2025 - SIAM Student Chapter</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #0B7A9F 0%, #00A896 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: #2c5282;
-            padding: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        nav ul li {
-            margin: 0;
-            position: relative;
-        }
-        
-        nav ul li a {
-            display: block;
-            padding: 15px 25px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        nav ul li a:hover,
-        nav ul li a.active {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #2c5282;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-        }
-        
-        .dropdown-content a {
-            padding: 12px 20px;
-            display: block;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #0B7A9F;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown > a::after {
-            content: ' ▾';
-            font-size: 0.8em;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .page-title {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #2c5282;
-        }
-        
-        .schedule-section {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        
-        .schedule-item {
-            border-left: 4px solid #0B7A9F;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f0f9ff;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .schedule-item h3 {
-            color: #2c5282;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        
-        .schedule-item .time {
-            font-weight: bold;
-            color: #0B7A9F;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-        
-        .schedule-item .topic {
-            color: #00A896;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .schedule-item p {
-            color: #4a5568;
-            line-height: 1.8;
-        }
-        
-        .break-item {
-            border-left: 4px solid #00A896;
-            background-color: #f0fdfa;
-            text-align: center;
-            padding: 15px;
-        }
-        
-        .break-item .time {
-            color: #00A896;
-        }
-        
-        .speaker-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .speaker-section h2 {
-            color: #2c5282;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        
-        .speaker-info {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        
-        .speaker-info h3 {
-            color: #0B7A9F;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        .speaker-info h4 {
-            color: #4a5568;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .speaker-info p {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-        
-        .conference-photo {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto 50px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-        
-        .conference-photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .conference-photo figcaption {
-            background-color: #f0f9ff;
-            padding: 15px 20px;
-            text-align: center;
-            color: #2c5282;
-            font-style: italic;
-        }
-        
-        footer {
-            background-color: #2c5282;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
-            color: #00A896;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Conference 2025 — SIAM Student Chapter at Purdue</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>SIAM Student Chapter</h1>
-        <p>Purdue University</p>
+    <div class="brandbar">
+        <div class="brandbar-inner">
+            <div class="pu-wordmark">
+                <img src="images/PU.png" alt="Purdue University">
+                <span>Purdue University</span>
+            </div>
+            <div><a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Department of Mathematics</a></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-logos">
+                <img src="images/PU.png" alt="Purdue University" class="logo-purdue">
+                <span class="logo-divider"></span>
+                <img src="images/siam_logo.png" alt="SIAM" class="logo-siam">
+            </div>
+            <div class="header-titles">
+                <div class="eyebrow">Student Chapter</div>
+                <h1>SIAM at Purdue</h1>
+                <div class="sub">Society for Industrial and Applied Mathematics</div>
+            </div>
+        </div>
     </header>
-    
-    <nav>
+
+    <nav class="primary">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="events.html">Current Events</a></li>
@@ -267,117 +47,140 @@
             <li><a href="social.html">Social Events</a></li>
         </ul>
     </nav>
-    
+
     <div class="container">
         <h1 class="page-title">Conference 2025</h1>
-        
-        <!-- Group Photo at the Top -->
+        <p class="page-subtitle">Purdue SIAM Student Conference</p>
+
         <figure class="conference-photo">
             <img src="images/conferences/group-2025.jpg" alt="Conference 2025 Group Photo">
-            <figcaption>SIAM Student Conference 2025 - Thank you to all participants and speakers!</figcaption>
+            <figcaption>SIAM Student Conference 2025 — thank you to all participants and speakers.</figcaption>
         </figure>
-        
+
         <div class="speaker-section">
-            <h2>🎤 Invited Speaker</h2>
+            <h2>Invited Speaker</h2>
             <div class="speaker-info">
                 <h3>Prof. Guang Lin</h3>
-                <h4>Associate Dean for Research and Innovation | Purdue University</h4>
-                <p><strong>Time:</strong> 1:30 PM - 2:20 PM</p>
+                <h4>Associate Dean for Research and Innovation · Purdue University</h4>
+                <p><strong>Time:</strong> 1:30 – 2:20 PM</p>
                 <p><strong>Topic:</strong> Interpretable, Robust, and Trustworthy AI Systems</p>
-                <p>This talk will introduce several innovative technologies designed to enable the development of interpretable, robust, and trustworthy AI systems. In particular, we will showcase AI frameworks that can be reliably deployed for real-time prediction of complex dynamical systems, with applications aimed at enhancing their stability and efficiency. To illustrate these concepts, I will present case studies on COVID-19 pandemic forecasting and personalized prediction in Alzheimer's disease, demonstrating how to construct data-driven models that are both interpretable and trustworthy.</p>
-                <p><strong>About the Speaker:</strong> Prof. Guang Lin is the Associate Dean for Research and Innovation and the Director of Data Science Consulting Service. He is also the Chair of the Initiative for Data Science and Engineering Applications at the College of Engineering and a Full Professor in the School of Mechanical Engineering and Department of Mathematics at Purdue University. Prof. Lin has received various awards, including the NSF CAREER Award, Mid-Career Sigma Xi Award, University Faculty Scholar, and Mathematical Biosciences Institute Early Career Award.</p>
+                <p>This talk introduces several innovative technologies designed to enable the development of interpretable, robust, and trustworthy AI systems. In particular, it showcases AI frameworks that can be reliably deployed for real-time prediction of complex dynamical systems, with applications aimed at enhancing their stability and efficiency. Case studies include COVID-19 pandemic forecasting and personalized prediction in Alzheimer's disease.</p>
+                <p><strong>About the Speaker:</strong> Prof. Guang Lin is the Associate Dean for Research and Innovation and the Director of Data Science Consulting Service. He is the Chair of the Initiative for Data Science and Engineering Applications at the College of Engineering and a Full Professor in the School of Mechanical Engineering and Department of Mathematics at Purdue University. His honors include the NSF CAREER Award, Mid-Career Sigma Xi Award, University Faculty Scholar, and Mathematical Biosciences Institute Early Career Award.</p>
             </div>
         </div>
-        
+
         <div class="schedule-section">
-            <h2 style="color: #2c5282; font-size: 2em; margin-bottom: 30px;">Conference Schedule</h2>
-            
+            <h2>Conference Schedule</h2>
+
             <div class="schedule-item">
-                <div class="time">9:30 - 9:40 AM</div>
+                <div class="time">9:30 – 9:40 AM</div>
                 <h3>Opening Remarks</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">9:40 - 10:00 AM</div>
-                <div class="topic">Machine Learning</div>
+                <div class="time">9:40 – 10:00 AM</div>
+                <span class="topic">Machine Learning</span>
                 <h3>L1 Regularized Linear Regression with Adversarially Corrupted Data</h3>
-                <p>This paper analyzes l_1 regularized linear regression under the challenging scenario of having only adversarially corrupted data for training. The research proves that existing deterministic adversarial attacks can be handled with a few samples for support recovery, and considers a more general stochastic adversary model showing counter-intuitive results about adversarial influence on sample complexity.</p>
+                <p>Analyzes l_1 regularized linear regression under adversarially corrupted training data. Proves deterministic adversarial attacks can be handled with a few samples for support recovery, and studies stochastic adversary models revealing counter-intuitive effects on sample complexity.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">10:05 - 10:25 AM</div>
-                <div class="topic">Machine Learning</div>
+                <div class="time">10:05 – 10:25 AM</div>
+                <span class="topic">Machine Learning</span>
                 <h3>Privacy-Preserving Relational Learning with Foundation Models</h3>
-                <p>Graphs offer a powerful framework for modeling relational data across various modalities, showing significant potential in enhancing foundation models by capturing relationships and knowledge among real-world entities. This talk will delve into how relational information embedded in graphs can be integrated with foundation models, with a central focus on privacy challenges posed by learning from sensitive relational data, particularly in augmenting and fine-tuning pretrained models.</p>
+                <p>Explores how relational information embedded in graphs can be integrated with foundation models, with a focus on privacy challenges posed by learning from sensitive relational data — particularly when augmenting and fine-tuning pretrained models.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">10:30 - 10:50 AM</div>
-                <div class="topic">Machine Learning</div>
+                <div class="time">10:30 – 10:50 AM</div>
+                <span class="topic">Machine Learning</span>
                 <h3>Shallow Ritz Method for One-Dimensional Elliptic Problems</h3>
-                <p>This presentation studies the shallow Ritz method for solving one-dimensional elliptic problems, showing that the method improves the order of approximation dramatically for non-smooth problems. A damped block Newton method is developed to achieve optimal or nearly optimal order of approximation with computational cost of O(n) per iteration.</p>
+                <p>Studies the shallow Ritz method for one-dimensional elliptic problems and shows the method dramatically improves the order of approximation for non-smooth problems. A damped block Newton method achieves optimal or nearly optimal order with O(n) cost per iteration.</p>
             </div>
-            
+
             <div class="schedule-item break-item">
-                <div class="time">10:55 - 11:15 AM</div>
-                <h3>☕ Coffee Break</h3>
+                <div class="time">10:55 – 11:15 AM</div>
+                <h3>Coffee Break</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">11:15 - 11:35 AM</div>
-                <div class="topic">PDE</div>
+                <div class="time">11:15 – 11:35 AM</div>
+                <span class="topic">PDE</span>
                 <h3>ReVAR: Data-Driven Aero-Optic Phase Screen Generation</h3>
-                <p>Disturbances such as atmospheric turbulence and aero-optic effects lead to wavefront aberrations. This paper introduces ReVAR (Re-Whitened Vector Auto-Regression), a novel algorithm for data-driven aero-optic phase screen generation that trains on experimental time-series data and generates synthetic data capturing the statistics of the experimental data. The algorithm is computationally efficient and produces high-quality results.</p>
+                <p>Introduces ReVAR (Re-Whitened Vector Auto-Regression), an algorithm for data-driven aero-optic phase screen generation that trains on experimental time-series data and synthesizes data matching the statistics of the experimental input — efficiently and with high quality.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">11:40 AM - 12:00 PM</div>
-                <div class="topic">Computer Vision</div>
+                <div class="time">11:40 AM – 12:00 PM</div>
+                <span class="topic">Computer Vision</span>
                 <h3>Geometry-Aware Superpixels (GAS) for 3D Scene Understanding</h3>
-                <p>This talk presents Geometry-Aware Superpixels (GAS) to address limitations in current 3D scene understanding approaches. GAS extends 2D+time superpixels to efficiently tessellate a 3D volume and dynamically adjusts its complexity based on scene content, allowing for both computational efficiency and high-quality scene understanding.</p>
+                <p>Presents GAS, which extends 2D+time superpixels to efficiently tessellate a 3D volume and dynamically adjusts complexity based on scene content — balancing computational efficiency and high-quality scene understanding.</p>
             </div>
-            
+
             <div class="schedule-item break-item">
-                <div class="time">12:05 - 1:25 PM</div>
-                <h3>🍽️ Lunch Break</h3>
+                <div class="time">12:05 – 1:25 PM</div>
+                <h3>Lunch Break</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">1:30 - 2:20 PM</div>
-                <div class="topic">Invited Speaker</div>
-                <h3>Prof. Guang Lin - Interpretable, Robust, and Trustworthy AI</h3>
+                <div class="time">1:30 – 2:20 PM</div>
+                <span class="topic">Invited Speaker</span>
+                <h3>Prof. Guang Lin — Interpretable, Robust, and Trustworthy AI</h3>
                 <p>See invited speaker section above for details.</p>
             </div>
-            
+
             <div class="schedule-item break-item">
-                <div class="time">2:30 - 3:00 PM</div>
-                <h3>☕ Coffee Break</h3>
+                <div class="time">2:30 – 3:00 PM</div>
+                <h3>Coffee Break</h3>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">3:00 - 3:20 PM</div>
-                <div class="topic">Mathematical Biology</div>
+                <div class="time">3:00 – 3:20 PM</div>
+                <span class="topic">Mathematical Biology</span>
                 <h3>Parameter Estimation in Agent-Based Models using AABC</h3>
-                <p>Pattern formation is present across the natural world. This talk demonstrates applying Approximate Approximate Bayesian Computation (AABC) to two biological systems: an agent-based model of zebrafish skin patterns and a vertex-based model of meristem development in fern gametophytes, showing the utility of AABC in understanding complex biological processes.</p>
+                <p>Applies Approximate Approximate Bayesian Computation (AABC) to an agent-based model of zebrafish skin patterns and a vertex-based model of meristem development in fern gametophytes, demonstrating AABC's utility for complex biological systems.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">3:25 - 3:45 PM</div>
-                <div class="topic">Optimization</div>
+                <div class="time">3:25 – 3:45 PM</div>
+                <span class="topic">Optimization</span>
                 <h3>Higher-Order Methods for Non-Convex Min-Max Optimization</h3>
-                <p>Recent advances in machine learning have brought new challenges in optimization, particularly for non-convex and min-max problems. This presentation examines partially second-order methods for min-max optimization and explores the higher-order smoothness regime by extending higher-order methods to cases of structured non-monotone and higher-order smooth problems.</p>
+                <p>Examines partially second-order methods for min-max optimization and explores the higher-order smoothness regime by extending higher-order methods to structured non-monotone and higher-order smooth problems.</p>
             </div>
-            
+
             <div class="schedule-item">
-                <div class="time">3:50 - 4:00 PM</div>
+                <div class="time">3:50 – 4:00 PM</div>
                 <h3>Closing Remarks</h3>
             </div>
         </div>
     </div>
-    
-    <footer>
-        <p>Contact us: <a href="mailto:siam@purdue.edu">siam@purdue.edu</a></p>
-        <p>&copy; 2025 SIAM Student Chapter - Purdue University</p>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-logos">
+                    <img src="images/PU.png" alt="Purdue University">
+                    <img src="images/siam_logo.png" alt="SIAM">
+                </div>
+                <p>SIAM Student Chapter<br>Purdue University<br>West Lafayette, IN</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Current Events</a>
+                <a href="conference.html">Student Conference</a>
+                <a href="social.html">Social Events</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:siam@purdue.edu">siam@purdue.edu</a>
+                <a href="https://www.purdue.edu/science/math/" target="_blank" rel="noopener">Purdue Mathematics</a>
+                <a href="https://www.siam.org/" target="_blank" rel="noopener">SIAM National</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 SIAM Student Chapter · Purdue University
+        </div>
     </footer>
 </body>
 </html>
