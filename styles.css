@@ -89,7 +89,7 @@ header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 24px;
 }
 .header-logos {
@@ -102,22 +102,23 @@ header.site-header {
     display: block;
     width: auto;
 }
-.header-logos .logo-purdue { height: 62px; }
-.header-logos .logo-siam   { height: 58px; }
+.header-logos .logo-purdue { height: 48px; }
+.header-logos .logo-siam   { height: 44px; }
 .header-logos .logo-divider {
     width: 1px;
-    height: 56px;
+    height: 42px;
     background: var(--border);
 }
 .header-titles { text-align: right; }
 .header-titles h1 {
     font-family: "Oswald", "Arial Narrow", Impact, sans-serif;
     color: var(--pu-black);
-    font-size: 2.1em;
+    font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     line-height: 1.1;
+    white-space: nowrap;
 }
 .header-titles h1 .at {
     color: var(--pu-gold-dark);
