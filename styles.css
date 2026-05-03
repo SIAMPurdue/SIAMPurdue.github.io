@@ -748,6 +748,19 @@ nav.primary ul li a.active {
     text-transform: uppercase;
 }
 
+/* ---------- Past Officers ---------- */
+.past-officers-section {
+    margin-top: 96px;
+}
+.past-officers-list {
+    list-style: disc;
+    margin: 0 auto;
+    padding-left: 22px;
+    max-width: 1200px;
+    color: var(--text-muted);
+    line-height: 1.9;
+}
+
 /* ---------- Event cards ---------- */
 .event-card {
     background: #fff;
