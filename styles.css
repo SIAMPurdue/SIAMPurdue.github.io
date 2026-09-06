@@ -748,6 +748,57 @@ nav.primary ul li a.active {
     text-transform: uppercase;
 }
 
+.officer-email {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--pu-gold-dark);
+    font-size: 0.9em;
+    word-break: break-all;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+.officer-email:hover {
+    border-bottom-color: var(--pu-gold-dark);
+}
+
+/* ---------- Contact ---------- */
+.contact-section {
+    margin-top: 96px;
+}
+.contact-list {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+.contact-row:first-child {
+    border-top: 1px solid var(--border);
+}
+.contact-row dt {
+    color: var(--pu-steel);
+    font-weight: 600;
+    font-size: 0.92em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.contact-row dd a {
+    color: var(--pu-gold-dark);
+    font-weight: 600;
+    word-break: break-all;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+.contact-row dd a:hover {
+    border-bottom-color: var(--pu-gold-dark);
+}
+
 /* ---------- Past Officers ---------- */
 .past-officers-section {
     margin-top: 96px;
