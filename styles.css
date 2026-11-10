@@ -318,6 +318,34 @@ nav.primary ul li a.active {
     max-width: 70ch;
 }
 
+/* ---------- Home page event notice ---------- */
+.event-notice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    background: var(--pu-light);
+    border-left: 4px solid var(--pu-gold-bright);
+    padding: 14px 20px;
+    margin-bottom: 40px;
+}
+.event-notice-tag {
+    font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: var(--pu-black);
+    color: #fff;
+    padding: 3px 10px;
+}
+.event-notice-text { margin: 0; flex: 1 1 320px; color: var(--text); }
+.event-notice-link {
+    font-weight: 700;
+    color: var(--pu-black);
+    white-space: nowrap;
+}
+
 /* ---------- Intro split (homepage hero) ---------- */
 .intro-split {
     display: grid;
